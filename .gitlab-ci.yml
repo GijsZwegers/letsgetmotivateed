@@ -6,17 +6,17 @@ variables:
     test: "LetsGetMotivated.Tests"
 
 before_script:
-    - "cd LetsGetMotivated"
     - "dotnet restore"
 
 build:
     stage: build
     script:
+        - "cd LetsGetMotivated"
         - "dotnet build"
 
 test:
     stage: test
     script: 
-        - "cd .."
-        - "cd $test"
+        - "dir"
+        - "cd LetsGetMotivated.Test"
         - "dotnet test"
