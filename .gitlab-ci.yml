@@ -1,0 +1,21 @@
+stages:
+    - build
+    - test
+
+variables:
+    test: "LetsGetMotivated.Tests"
+
+before_script:
+    - "cd LetsGetMotivated"
+    - "dotnet restore"
+
+build:
+    stage: build
+    script:
+        - "dotnet build"
+
+test:
+    stage: test
+    script: 
+        - "cd $test"
+        - "dotnet test"
