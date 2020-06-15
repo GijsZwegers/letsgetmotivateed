@@ -44,7 +44,24 @@ namespace LetsGetMotivated.Api.Controllers
         public async Task<JsonResult> GetAll()
         {
             return new JsonResult(await _taskslogic.GetAll());
+        }
 
+        [HttpGet]
+        public async Task<JsonResult> GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpGet]
+        public async Task<JsonResult> GetTaskForDay(DateTime date)
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpPost]
+        public async Task<JsonResult> UpdateAllTasks(List<Tasks> tasks)
+        {
+            throw new NotImplementedException();
         }
     }
 }
